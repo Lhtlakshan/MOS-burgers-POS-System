@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOS burgers</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <ul>
+          <li><a href="">Food items</a></li>
+          <li><a href="./customer.html">Customer</a></li>
+        </ul>
+      </div>
+      <h1>MOS burgers</h1>
+      <p>Welcome to MOS burgers !!!</p>
+
+      <h2>Food Items</h2>
+      <div id="foods">
+        <div class="food-item">
+          <h3>Burgers</h3>
+          <div id="burgers"></div>
+        </div>
+        <div class="food-item">
+          <h3>submarines</h3>
+          <div id="submarines"></div>
+        </div>
+        <div class="food-item">
+          <h3>fries</h3>
+          <div id="fries"></div>
+        </div>
+        <div class="food-item">
+          <h3>pasta</h3>
+          <div id="pasta"></div>
+        </div>
+        <div class="food-item">
+          <h3>chicken</h3>
+          <div id="chicken"></div>
+        </div>
+        <div class="food-item">
+          <h3>beverages</h3>
+          <div id="beverages"></div>
+        </div>
+      </div>
+
+      <div class="item-form">
+        <h2>Add Food items</h2>
+        <form action="" method="">
+          <div class="item">
+            <label for="discount">Food item type</label>
+            <select name="food-type" id="food-type" required="true">
+              <option value="" selected disabled hidden>Choose here</option>
+              <option value="burger">Burger</option>
+              <option value="submarine">Submarine</option>
+              <option value="fries">Fries</option>
+              <option value="pasta">Pasta</option>
+              <option value="chicken">Chicken</option>
+              <option value="beverages">Beverages</option>
+            </select>
+          </div>
+
+          <div class="item">
+            <label for="item-code">Item code</label>
+            <input type="text" id="item-code" placeholder="Enter item code" />
+          </div>
+
+          <div class="item">
+            <label for="item-name">Item name</label>
+            <input
+              type="text"
+              id="item-name"
+              placeholder="Enter the item name"
+            />
+          </div>
+
+          <div class="item">
+            <label for="price">Price (LKR)</label>
+            <input type="text" id="price" placeholder="Enter the Price (LKR)" />
+          </div>
+
+          <div class="item">
+            <label for="expire-date">Expire date</label>
+            <input
+              type="date"
+              id="expire-date"
+              placeholder="Enter expire date"
+            />
+          </div>
+
+          <div class="item">
+            <label for="discount">Discount</label>
+            <input
+              type="text"
+              id="discount"
+              placeholder="Enter the discount(%)"
+            />
+          </div>
+
+          <div class="item" id="itemBtn">
+            <button type="button" id="add-btn" onclick="addItem()">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
