@@ -17,7 +17,7 @@ let burgers = [
     id: "B1003",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2024-12-01",
+    expireDate: "2024-08-01",
     discount: 15,
   },
 ];
@@ -256,7 +256,7 @@ let loardItems = () => {
 
 };
 
-let = checkExpireDate=(item , date)=>{
+let = checkExpireDate=(product , date)=>{
   let today = new Date();
   let currentYear = today.getFullYear();
   let currentMonth = today.getMonth() + 1;
@@ -270,7 +270,7 @@ let = checkExpireDate=(item , date)=>{
   }
   let fullDate = `${currentYear}-${currentMonth}-${currentDate}`;
   if(date < fullDate){
-     return `${item} " is expired"`;
+     alert(`${product} is expired`);
   }
 }
 loardItems();
