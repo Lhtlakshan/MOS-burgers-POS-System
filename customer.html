@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customers</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <ul>
+          <li><a href="">Food items</a></li>
+          <li><a href="./customer.html">Customer</a></li>
+        </ul>
+      </div>
+      <h1>MOS burgers</h1>
+
+      <h2>Customers</h2>
+      <table id="customerDetails">
     
-</body>
+</table>
+      <div class="customer-form">
+      <form action="">
+        <h2>Add Customer</h2>
+        
+          <div class="item">
+            <label for="tel-no">Telephone no.</label>
+            <input type="text" id="tel-no" placeholder="Enter the telephone number" />
+          </div>
+
+          <div class="item">
+            <label for="customer-name">Customer name</label>
+            <input
+              type="text"
+              id="customer-name"
+              placeholder="Enter the customer name"
+            />
+          </div>
+          <div class="item" id="itemBtn">
+            <button type="button" id="add-btn" onclick="addCustomer()">Add</button>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+    <script src="customer.js"></script>
+  </body>
 </html>
+

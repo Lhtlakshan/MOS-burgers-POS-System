@@ -32,7 +32,7 @@ h2 {
     margin: 50px 0 1%;
 }
 
-.item-form{
+.item-form,.customer-form{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -190,4 +190,24 @@ li a {
 
 li a:hover {
     background-color: #9f9595;
+}
+
+table{
+ margin: 20px;
+ width: 75%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: azure;
+border-radius: 20px;
+background: #515050;
+box-shadow: 5px 5px 10px #1b1b1b;
+}
+
+th{
+    padding: 10px;
+}
+
+td {
+    padding: 2px;
 }

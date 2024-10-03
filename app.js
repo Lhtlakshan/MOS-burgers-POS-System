@@ -3,21 +3,21 @@ let burgers = [
     id: "B1001",
     name: "Classic Burger (Large)",
     price: 750.0,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 0,
   },
   {
     id: "B1002",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
   {
     id: "B1003",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
 ];
@@ -27,21 +27,21 @@ let submarines = [
     id: "B1016",
     name: "Classic Submarin (Large)",
     price: 750.0,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 0,
   },
   {
     id: "B1017",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
   {
     id: "B1018",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
 ];
@@ -51,21 +51,21 @@ let fries = [
     id: "B1025",
     name: "Classic Burger (Large)",
     price: 750.0,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 0,
   },
   {
     id: "B1026",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
   {
     id: "B1027",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
 ];
@@ -75,21 +75,21 @@ let pasta = [
     id: "B1025",
     name: "Classic Burger (Large)",
     price: 750.0,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 0,
   },
   {
     id: "B1026",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
   {
     id: "B1027",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
 ];
@@ -99,21 +99,21 @@ let chicken = [
     id: "B1025",
     name: "Classic Burger (Large)",
     price: 750.0,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 0,
   },
   {
     id: "B1026",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
   {
     id: "B1027",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
 ];
@@ -123,21 +123,21 @@ let beverages = [
     id: "B1025",
     name: "Classic Burger (Large)",
     price: 750.0,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 0,
   },
   {
     id: "B1026",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   },
   {
     id: "B1026",
     name: "Classic Burger (Regular)",
     price: 1500,
-    expireDate: "2022-12-01",
+    expireDate: "2024-12-01",
     discount: 15,
   }
 ];
@@ -162,13 +162,14 @@ let loardItems = () => {
          <p id="name-detail">${item.name}</p>
          <img id="imgItem" src="./img/burger.jpg" alt="" srcset="">
          <p id="detail">LKR ${item.price}</p>
-         <p id="detail">Expire date : <br> ${item.expireDate}</p>
+         <p id="detail">Expire date : <br> ${item.expireDate} <p id="expired"></p></p>
          <p id="detail">${item.discount}% off</p>
         <span>
             <button class="btn-item" onclick="editItem('burger' , ${index})">Edit</button>
             <button class="btn-item" id="delete" onclick=deleteBurgers(${index})>Delete</button>
         </span>
       </div>`;
+      checkExpireDate(item.name, item.expireDate);
   });
 
   submarines.forEach((item, index) => {
@@ -176,13 +177,14 @@ let loardItems = () => {
          <p id="name-detail">${item.name}</p>
          <img id="imgItem" src="./img/submarine.jpg" alt="" srcset="">
          <p id="detail">LKR ${item.price}</p>
-         <p id="detail">Expire date : <br> ${item.expireDate}</p>
+         <p id="detail">Expire date : <br> ${item.expireDate} <p id="expired"></p></p>
          <p id="detail">${item.discount}% off</p>
         <span>
             <button class="btn-item" onclick="editItem('submarine',${index})">Edit</button>
             <button class="btn-item" id="delete" onclick=deleteSubmarines(${index})>Delete</button>
         </span>
       </div>`;
+      checkExpireDate(item.name, item.expireDate);
   });
 
   fries.forEach((item, index) => {
@@ -190,13 +192,14 @@ let loardItems = () => {
          <p id="name-detail">${item.name}</p>
          <img id="imgItem" src="./img/fries.jpg" alt="" srcset="">
          <p id="detail">LKR ${item.price}</p>
-         <p id="detail">Expire date : <br> ${item.expireDate}</p>
+         <p id="detail">Expire date : <br> ${item.expireDate} <p id="expired"></p></p>
          <p id="detail">${item.discount}% off</p>
         <span>
             <button class="btn-item" onclick="editItem('fires',${index})">Edit</button>
             <button class="btn-item" id="delete" onclick=deleteFries(${index})>Delete</button>
         </span>
       </div>`;
+      checkExpireDate(item.name, item.expireDate);
   });
 
   pasta.forEach((item, index) => {
@@ -204,13 +207,14 @@ let loardItems = () => {
          <p id="name-detail">${item.name}</p>
          <img id="imgItem" src="./img/pasta.jpg" alt="" srcset="">
          <p id="detail">LKR ${item.price}</p>
-         <p id="detail">Expire date : <br> ${item.expireDate}</p>
+         <p id="detail">Expire date : <br> ${item.expireDate} <p id="expired"></p></p>
          <p id="detail">${item.discount}% off</p>
         <span>
             <button class="btn-item" onclick="editItem('pasta',${index})">Edit</button>
             <button class="btn-item" id="delete" onclick=deletePasta(${index})>Delete</button>
         </span>
       </div>`;
+      checkExpireDate(item.name, item.expireDate);
   });
 
   chicken.forEach((item, index) => {
@@ -218,13 +222,14 @@ let loardItems = () => {
          <p id="name-detail">${item.name}</p>
          <img id="imgItem" src="./img/chicken.jpg" alt="" srcset="">
          <p id="detail">LKR ${item.price}</p>
-         <p id="detail">Expire date : <br> ${item.expireDate}</p>
+         <p id="detail">Expire date : <br> ${item.expireDate} <p id="expired"></p></p>
          <p id="detail">${item.discount}% off</p>
         <span>
             <button class="btn-item" onclick="editItem('chicken',${index})">Edit</button>
             <button class="btn-item" id="delete" onclick=deleteChicken(${index})>Delete</button>
         </span>
       </div>`;
+      checkExpireDate(item.name, item.expireDate);
   });
 
   beverages.forEach((item, index) => {
@@ -232,13 +237,14 @@ let loardItems = () => {
          <p id="name-detail">${item.name}</p>
          <img id="imgItem" src="./img/beverages.jpg" alt="" srcset="">
          <p id="detail">LKR ${item.price}</p>
-         <p id="detail">Expire date : <br> ${item.expireDate}</p>
+         <p id="detail">Expire date : <br> ${item.expireDate} <p id="expired"></p></p>
          <p id="detail">${item.discount}% off</p>
         <span>
             <button class="btn-item" onclick="editItem('beverages',${index})">Edit</button>
             <button class="btn-item" id="delete" onclick=deleteBeverages(${index})>Delete</button>
         </span>
       </div>`;
+      checkExpireDate(item.name, item.expireDate);
   });
 
   bur.innerHTML = burgersBody;
@@ -247,7 +253,26 @@ let loardItems = () => {
   pas.innerHTML = pastaBody;
   chick.innerHTML = chickenBody;
   beve.innerHTML = beveragesBody;
+
 };
+
+let = checkExpireDate=(item , date)=>{
+  let today = new Date();
+  let currentYear = today.getFullYear();
+  let currentMonth = today.getMonth() + 1;
+  let currentDate = today.getDate();
+
+  if (currentMonth < 10) {
+    currentMonth = "0" + currentMonth;
+  }
+  if (currentDate < 10) {
+    currentDate = "0" + currentDate;
+  }
+  let fullDate = `${currentYear}-${currentMonth}-${currentDate}`;
+  if(date < fullDate){
+     return `${item} " is expired"`;
+  }
+}
 loardItems();
 
 const deleteBurgers = (index) => {
@@ -410,3 +435,4 @@ let clearValues = () => {
   expireDate.value = "";
   discount.value = "";
 };
+
