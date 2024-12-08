@@ -23,6 +23,10 @@ form{
     
 }
 
+#idP{
+    color: black;
+}
+
 input[type=text],
 input[type=password] {
     width: 100%;
@@ -39,11 +43,6 @@ input[type=text]:focus,
 input[type=password]:focus {
     background-color: #ddd;
     outline: none;
-}
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
 }
 
 button {
