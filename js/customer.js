@@ -56,6 +56,7 @@ let addCustomer = () => {
   if (cusTelNo.value != "" && cusName.value != "") {
     customers.push(customer);
     loadCustomers();
+    alert("Customer successfully added")
   } else {
     alert("Telephone number and name should not be empty...!!!");
   }

@@ -2,14 +2,38 @@
     margin: 0;
     padding: 0;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
 
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding-left: 1rem;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0d47a1
+}
+.navbar{
+    width: 100%;
+    height: 75px;
+    box-shadow: 5px 5px 10px #1b1b1b;
+    margin-bottom: 20px;
+}
 body{
     font-family: 'Poppins', sans-serif;
     background-image: url("./img/burgerImg2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 .container{
@@ -96,9 +120,9 @@ button:hover{
 }
 
 .btn-item{
-    width: 50px;
-    height: 20px;
-    font-size: 12px;
+    width: 60px;
+    height: 30px;
+    font-size: medium;
     margin: 5px;
 }
 
@@ -124,9 +148,10 @@ button:hover{
 }
 
 .food{
+
     width: 180px;
-    height: 260px;
-    background-color: #dcface;
+    height: 320px;
+    background-color: rgb(189, 189, 189);
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -137,6 +162,27 @@ button:hover{
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #1b1b1b;
+}
+
+.itemDetailsdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 150px;
+    height: auto;
+    background-color: #938d8d;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 5px 5px 10px #1b1b1b;
+}
+.addToCartBtn{
+   margin-top: 5px;
+   width: 150px;
+   height: 30px;
+   font-size: medium;
+   box-shadow: 5px 5px 10px #1b1b1b;
 }
 
 #imgItem{
@@ -162,15 +208,10 @@ img{
     margin: 5px;
 }
 
-.navbar{
-    box-shadow: 5px 5px 10px #1b1b1b;
-    border-radius: 10px;
-}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
     width: auto;
 }
 
