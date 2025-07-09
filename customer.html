@@ -3,55 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customers</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MOS burgers</title>
+    <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="navbar">
         <nav>
-  <ul>
-    <li><a href="#">MOS Burgers</a></li>
-  </ul>
-  
-  <ul>
-    <li><a >Home</a></li>
-    <li><a href="admin.html">Foods</a></li>
-    <li><a href="customer.html">Customers</a></li>
-  </ul>
-</nav>
+          <ul>
+            <li><a href="#">MOS Burgers</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="customer.html">Home</a></li>
+          </ul>
+        </nav>
       </div>
       <h1>MOS burgers</h1>
+      <p id="welcome">Welcome to MOS burgers !!!</p>
 
-      <h2>Customers</h2>
-      <table id="customerDetails">
-    
-</table>
-      <div class="customer-form">
-      <form action="">
-        <h2>Add Customer</h2>
-        
-          <div class="item">
-            <label for="tel-no">Telephone no.</label>
-            <input type="text" id="tel-no" placeholder="Enter the telephone number" />
-          </div>
-
-          <div class="item">
-            <label for="customer-name">Customer name</label>
-            <input
-              type="text"
-              id="customer-name"
-              placeholder="Enter the customer name"
-            />
-          </div>
-          <div class="item" id="itemBtn">
-            <button type="button" id="add-btn" onclick="addCustomer()">Add</button>
-          </div>
+      <h2>Food Items</h2>
+      <div id="foods">
+        <div class="food-item">
+          <h3>Burgers</h3>
+          <div id="burgers"></div>
+        </div>
+        <div class="food-item">
+          <h3>submarines</h3>
+          <div id="submarines"></div>
+        </div>
+        <div class="food-item">
+          <h3>fries</h3>
+          <div id="fries"></div>
+        </div>
+        <div class="food-item">
+          <h3>pasta</h3>
+          <div id="pasta"></div>
+        </div>
+        <div class="food-item">
+          <h3>chicken</h3>
+          <div id="chicken"></div>
+        </div>
+        <div class="food-item">
+          <h3>beverages</h3>
+          <div id="beverages"></div>
         </div>
       </div>
-      </form>
     </div>
-    <script src="./js/customer.js"></script>
+    <div class="cart">
+      <h2>My Cart</h2>
+      <div id="cart-items"></div>
+      <div id="total-price"></div>
+    </div>
+    <script src="./js/customer_work.js" defer></script>
   </body>
 </html>
-

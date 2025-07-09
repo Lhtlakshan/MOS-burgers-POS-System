@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../style_form.css" />
+    <link rel="stylesheet" href="../style/style_form.css" />
+    <script src="../js/login.js"></script>
   </head>
   <body>
     <div class="form">
@@ -13,13 +14,14 @@
           <h1>Sign Up</h1><br> 
 
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required />
+          <input type="text" placeholder="Enter Email" name="email" id="email" required/>
 
           <label for="psw"><b>Password</b></label>
           <input
             type="password"
             placeholder="Enter Password"
             name="psw"
+            id="password"
             required
           />
 
@@ -28,6 +30,7 @@
             type="password"
             placeholder="Repeat Password"
             name="psw-repeat"
+            id="repeatPassword"
             required
           />
 
@@ -50,7 +53,7 @@
 
           <div class="clearfix">
             <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="submit" class="signupbtn" onclick="signup()">Sign Up</button>
           </div>
         </div>
       </form>

@@ -1,3 +1,4 @@
+
 let burgers = [
   {
     id: "B1001",
@@ -21,6 +22,7 @@ let burgers = [
     discount: 15,
   },
 ];
+
 
 let submarines = [
   {
@@ -144,6 +146,32 @@ let beverages = [
 
 let cart = [];
 
+function updateCart() {
+  let shoppingCartItem = document.getElementById("cart-items");
+  let totPrice = document.getElementById("total-price");
+
+  let sCart = ``;
+  let totalPrice = 0;
+
+  cart.forEach((item) => {
+    sCart += `<div my-cart-item>
+          <div class="itemName">
+            ${item.name}
+          </div>
+          <div class="itemPrice">
+            ${item.price}
+          </div>
+        </div>`;
+    totalPrice += item.price;
+    console.log(item.name); // Log each cart item
+  });
+
+  console.log(cart); // Log the entire cart
+
+  shoppingCartItem.innerHTML = sCart;
+  totPrice.innerHTML = totalPrice;
+} 
+
 function addToCart(category, index) {
   let selectedItem;
 
@@ -170,12 +198,10 @@ function addToCart(category, index) {
       alert("Invalid category!");
       return;
   }
-   cart.push(selectedItem);
-
-   console.log(cart);
-   
+  cart.push(selectedItem);
+  updateCart();
+  //console.log(cart);
 }
-
 
 let loardItem = () => {
   let bur = document.getElementById("burgers");

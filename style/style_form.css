@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url("./img/burgerImg2.jpg");
+    background-image: url("../img/burgerImg2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
