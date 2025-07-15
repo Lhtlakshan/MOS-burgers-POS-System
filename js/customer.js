@@ -32,7 +32,7 @@ let loadCustomers = () => {
          <tr>
               <td>${cus.name}</td>
               <td>${cus.telNo}</td>
-              <td><button class="btn-item" onclick="editCustomer(${index})">Edit</button>
+              <td class="action-btns"><button class="btn-item" onclick="editCustomer(${index})">Edit</button>
             <button class="btn-item" id="delete" onclick="deleteCustomer(${index})">Delete</button></td>
           </tr>
         <span>

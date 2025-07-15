@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-body{
-    padding-top: 75px;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -50,6 +46,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    padding-top: 75px;
 }
 
 .container{
@@ -69,12 +66,43 @@ h1 , #welcome{
 
 h2 {
     color: whitesmoke;
-    margin: 50px 0 1%;
+    margin-bottom: 0px;
+}
+
+.customers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px
+}
+
+#customerDetails{
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(42, 44, 44);
+    border-radius: 20px;
+    background: #bcadad;
+    box-shadow: 8px 8px 8px #000000;
+}
+
+.action-btns{
+    display: flex;
+    flex-direction:row;
 }
 
 .item-form{
-    margin-top: 20px;
+    margin-top: 10px;
         display: flex;
+        position: fixed;
+        top: 80px;
+        right: 10px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -82,6 +110,7 @@ h2 {
 }
 .customer-form {
     margin-top: 20px;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +119,7 @@ h2 {
 
 form{
     margin: 5%;
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     background-image: url("./img/burgerImg3.jpg");
@@ -108,19 +137,19 @@ h3{
 }
 
 .item{
-    margin: 10px;
+    margin: 6px;
     width: 100%;
 }
 
 label{
-    font-size: 20px;
+    font-size: 17px;
     margin: 5px;
 }
 
 input , select{
     width: 90%;
     height: 30px;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 10px;
     border: none;
     padding: 5px;
@@ -256,17 +285,19 @@ li a:hover {
     background-color: #9f9595;
 }
 
-table{
- margin: 20px;
+.cart-table{
+ margin: 10px;
  width: 75%;
  display: flex;
  align-items: center;
  justify-content: center;
  color: azure;
 border-radius: 20px;
-background: #515050;
+background: #636060;
 box-shadow: 5px 5px 10px #1b1b1b;
 }
+
+
 
 th{
     padding: 10px;
@@ -285,7 +316,7 @@ td {
 
 .cart {
     border-radius: 20px;
-    padding: 15px;
+    padding: 5px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -298,6 +329,8 @@ td {
         -webkit-backdrop-filter: blur(8px);
     box-shadow: 5px 5px 10px #1b1b1b;
     position: fixed;
+    align-items: center;
+    justify-content: center;
     top: 100px;
     right: 10px;
 }
@@ -349,4 +382,22 @@ td {
 tfoot{
     padding-top: 20px;
     padding-bottom: 10px;
+}
+
+.btn-item{
+    width: 50px;
+    height: 30px;
+    font-size: 12px;
+    box-shadow: 5px 5px 10px #1b1b1b;
+    background-color: #ab0b00;
+}
+
+#place-order-btn{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px #1b1b1b;
+    background-color: #09c222;
+    margin-bottom: 12px;
+    margin-top: 12px;
 }

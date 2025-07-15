@@ -146,6 +146,11 @@ let beverages = [
 
 let cart = [];
 
+const deleteCartItem = (item) => {
+    cart.splice(cart.indexOf(item), 1);
+    updateCart();
+}
+
 function updateCart() {
   let shoppingCartItem = document.getElementById("cart-items");
   let totPrice = document.getElementById("total-price");
@@ -160,6 +165,14 @@ function updateCart() {
     <td>${item.name}</td>
     <td>${item.qty}</td>
     <td>${item.unitPrice}</td>
+    <td><button
+      type="button"
+      class="delete-btn"
+      onclick="deleteCartItem('${item.id}')"
+      title="Remove"
+    >
+      <img src="./img/delete.png" alt="delete" />
+    </button></td>
   </tr>`;
     
   });
@@ -171,7 +184,7 @@ function updateCart() {
 function addToCart(category, index) {
   let selectedItem;
   
-  switch (category) {
+  switch (category) { 
     case "burgers":
       selectedItem = burgers[index];
       break;
@@ -212,8 +225,26 @@ function addToCart(category, index) {
     updateCart();
     return;
   }
+}
+
+let orders = [];
+
+const placeOrder = () =>{
+
+  if(cart.length === 0){
+    alert("Cart is empty!");
+    return;
+  }
+
+  let order = {
+    date : new Date(),
+    items : cart,
+    totalPrice : cart.price
+  }
+
+  orders.push(order);
   
-  
+  alert("Order placed successfully!");
 }
 
 let loardItem = () => {
