@@ -154,27 +154,23 @@ function updateCart() {
   let totalPrice = 0;
 
   cart.forEach((item) => {
-    sCart += `<div my-cart-item>
-          <div class="itemName">
-            ${item.name}
-          </div>
-          <div class="itemPrice">
-            ${item.price}
-          </div>
-        </div>`;
     totalPrice += item.price;
-    console.log(item.name); // Log each cart item
+    sCart += `<tr class="cart-item">
+    <td>${item.id}</td>
+    <td>${item.name}</td>
+    <td>${item.qty}</td>
+    <td>${item.unitPrice}</td>
+  </tr>`;
+    
   });
-
-  console.log(cart); // Log the entire cart
-
   shoppingCartItem.innerHTML = sCart;
   totPrice.innerHTML = totalPrice;
+  console.log(cart);
 } 
 
 function addToCart(category, index) {
   let selectedItem;
-
+  
   switch (category) {
     case "burgers":
       selectedItem = burgers[index];
@@ -198,9 +194,26 @@ function addToCart(category, index) {
       alert("Invalid category!");
       return;
   }
-  cart.push(selectedItem);
-  updateCart();
-  //console.log(cart);
+
+  const row = cart.find(item=> item.id === selectedItem.id);
+  if(row){
+    row.qty +=1;
+    row.price += selectedItem.price;
+    updateCart();
+    return;
+  }else{
+    cart.push({
+      id: selectedItem.id,
+      name: selectedItem.name,
+      unitPrice : selectedItem.price,
+      price: selectedItem.price,
+      qty: 1
+    });
+    updateCart();
+    return;
+  }
+  
+  
 }
 
 let loardItem = () => {

@@ -52,8 +52,25 @@
     </div>
     <div class="cart">
       <h2>My Cart</h2>
-      <div id="cart-items"></div>
-      <div id="total-price"></div>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Unit Price (Rs)</th>
+          </tr>
+        </thead>
+      
+        <tbody id="cart-items"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" style="text-align:right;"><strong>Total</strong></td>
+            <td id="total-price"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <button type="submit">Place Order</button>
     </div>
     <script src="./js/customer_work.js" defer></script>
   </body>
